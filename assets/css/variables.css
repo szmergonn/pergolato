@@ -1,12 +1,16 @@
 :root {
     /* Colors */
-
+    --color-primary: #22333B;
+    --color-bg: #141F23;
+    --color-text: #E9EBEB;
+    --color-white: #fff;
     /* Typography */
-
+    --font-primary: "IvyPresto Headline", serif;
+    --font-secondary: "BDO Grotesk", sans-serif;
     /* Margins */
 
     /* Shadows */
-
+    --shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.2);
     /* Transitions */
 
     /* Container sizes */

@@ -1,0 +1,54 @@
+.page {
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+/* .header {
+} */
+
+.header__menu {
+  color: var(--color-text);
+  background-color: var(--color-primary);
+  height: 139px; /* MUST BE CHANGED LATER, PROBABLY FOR PADDINGS*/
+}
+
+.header__links-list {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 22px;
+  width: max-content;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.13);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(3.9px); /* JUST TOOK THE VALUE FROM FIGMA (NEED TO TEST)*/
+}
+
+.header__links-list-item {
+  padding: 6px 0;
+}
+
+.header__link {
+  padding: 1px 12px;
+  font-size: 23px;
+  font-weight: 300;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header__link:hover {
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.header__link_active,
+.header__link.header__link_active:hover {
+  cursor: default;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: var(--color-text);
+}
+
+.header__link:focus-visible {
+  outline: 2px solid var(--color-white);
+}
