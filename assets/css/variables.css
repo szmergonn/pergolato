@@ -4,6 +4,8 @@
     --color-bg: #141F23;
     --color-text: #E9EBEB;
     --color-white: #fff;
+    --color-btn-hover: #0C1215;
+    --color-btn-icon-hover: #1A262C;
     /* Typography */
     --font-primary: "IvyPresto Headline", serif;
     --font-secondary: "BDO Grotesk", sans-serif;
@@ -14,4 +16,7 @@
     /* Transitions */
 
     /* Container sizes */
+
+    /* Line-height */
+    --lh-120: 1.2;
 }
