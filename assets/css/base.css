@@ -12,7 +12,6 @@
 .header__menu {
   display: flex;
   flex-direction: column;
-  align-content: center;
   color: var(--color-text);
   background-color: var(--color-primary);
   padding: 40px 0;
@@ -29,6 +28,7 @@
   border-radius: 20px;
   box-shadow: var(--shadow);
   backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
 }
 
 .header__links-list-item {
@@ -37,7 +37,7 @@
 
 .header__link {
   padding: 1px 12px;
-  font-size: 23px;
+  font-size: 1.438rem;
   font-weight: 300;
   border-radius: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -61,7 +61,7 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background-color: var(--color-bg);
@@ -73,20 +73,20 @@
 
 .hero__title {
   color: var(--color-text);
-  font-size: 86px;
+  font-size: 5.375rem;
   font-weight: 600;
   line-height: var(--lh-120);
-  margin-top: 10.5vh;
-  margin-bottom: 5.3vh;
+  margin-top: 6.813rem;
+  margin-bottom: 3.438rem;
 }
 
 .hero__description {
   color: var(--color-text);
-  font-size: 23px;
+  font-size: 1.438rem;
   font-weight: 300;
   line-height: var(--lh-120);
   max-width: 372px;
-  margin-bottom: 5.3vh;
+  margin-bottom: 3.438rem;
 }
 
 .hero__btn {
@@ -99,11 +99,10 @@
   border-radius: 20px;
   color: var(--color-text);
   font-family: var(--font-secondary);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 300;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 13.5vh;
 }
 
 .hero__icon-wrapper {
@@ -138,24 +137,46 @@
 }
 
 .hero__submain {
+  width: 100%;
+  background-color: #eae0d6;
+  padding: 18px 0;
+}
+
+.hero__submain .container {
   display: flex;
   align-items: center;
-  max-width: 729px;
-  padding: 18px 0;
-  background-color: #eae0d6;
-  z-index: 1;
 }
 
 .hero__subtext {
-  font-size: 23px;
+  max-width: 372px;
+  font-size: 1.438rem;
   font-weight: 300;
   color: var(--color-bg);
   line-height: var(--lh-120);
 }
 
-.hero__image {
+.hero__image-wrapper {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: calc((100vw - 1440px) / 2);
+  left: 50%;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.hero__image {
+  max-width: none;
+  width: 1446px;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.hero__content {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
