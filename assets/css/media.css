@@ -1,0 +1,9 @@
+@media (min-width: 1440px) {
+  .container {
+    max-width: clamp(1260px, 58.9vw + 412px, 1920px);
+  }
+
+  .hero__image-wrapper {
+    left: calc(50% - ((100vw - 1440px) * 320 / 1120));
+  }
+}
