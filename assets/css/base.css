@@ -284,3 +284,61 @@
 .hotspot:hover span {
   display: block;
 }
+
+.feature {
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  display: flex;
+  gap: 110px;
+}
+
+.feature__image {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.feature__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature__title {
+  color: var(--color-text);
+  font-size: 55px;
+  font-weight: 600;
+  line-height: var(--lh-120);
+  margin-bottom: 18px;
+}
+
+.feature__description {
+  color: var(--color-text);
+  font-family: var(--font-secondary);
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 511px;
+  margin-bottom: 40px;
+}
+
+.feature__items {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-column-gap: 20px;
+  grid-row-gap: 25px;
+  justify-content: start;
+}
+
+.feature__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.feature__item span {
+  max-width: 143px;
+  color: var(--color-text);
+  font-family: var(--font-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
