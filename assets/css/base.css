@@ -18,6 +18,11 @@
 }
 
 .header__links-list {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  z-index: 111;
   display: flex;
   align-items: center;
   padding: 0 6px;
@@ -286,15 +291,28 @@
 }
 
 .feature {
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.feature__track {
+  display: flex;
+  height: 100%;
+}
+
+.feature__slide {
+  flex: 0 0 100dvw;
+  height: 100dvh;
   background-color: var(--color-bg);
   display: flex;
+  align-items: center;
   gap: 110px;
 }
 
 .feature__image {
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: auto;
+  height: 100dvh;
+  object-fit: cover;
 }
 
 .feature__content {
