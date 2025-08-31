@@ -260,3 +260,27 @@
   top: 74%;
   left: 23%;
 }
+
+.hotspot span {
+  font-family: var(--font-secondary);
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, -50%);
+  background: #eae0d6;
+  padding: 14px 11px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-btn-hover);
+  width: 220px;
+  text-align: center;
+  white-space: normal;
+  word-break: keep-all;
+  hyphens: none;
+}
+
+.hotspot:hover span {
+  display: block;
+}
