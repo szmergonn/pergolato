@@ -207,21 +207,52 @@
           </article>
         </div>
       </section>
-
-      <section
-        style="
-          min-height: 100vh;
-          background: grey;
-          color: black;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 2rem;
-        "
-      >
+      <section class="contact">
         <div class="container">
-          <h2>Następna sekcja</h2>
-          <p>Ta sekcja powinna być widoczna po przescrollowaniu feature sekcji.</p>
+          <div class="contact__info">
+            <h3 class="contact__title">Porozmawiajmy</h3>
+            <p class="contact__description">
+              Masz pytania, chcesz dopasować produkt do albo potrzebujesz konsultacji technicznej? Zostaw swoje dane –
+              nasz ekspert skontaktuje się z Tobą i pomoże Ci stworzyć rozwiązanie dopasowane do Twoich potrzeb.
+            </p>
+            <button class="contact__button-calendar">
+              <img src="assets/images/icons/contact.svg" alt="" />
+              Umów się na rozmowę z ekspertem
+            </button>
+            <div class="contact__details">
+              <address class="contact__contact">
+                <h4 class="contact__subtitle">Kontakt</h4>
+                <span>+48 61 8403006<br />kontakt@pergolato.pl</span>
+              </address>
+              <address class="contact__address">
+                <h4 class="contact__subtitle">Pergolato</h4>
+                <span>ul. Mrowińska 5<br />60-427 Poznań</span>
+              </address>
+            </div>
+          </div>
+
+          <form class="contact__form">
+            <label class="visually-hidden" for="name"></label>
+            <input name="name" id="name" type="text" placeholder="Jak masz na imię?" required/>
+            <label class="visually-hidden" for="email"></label>
+            <input name="email" id="email" type="email" placeholder="Adres e-mail" required/>
+            <label class="visually-hidden" for="topic"></label>
+            <input name="topic" id="topic" type="text" placeholder="Wybierz temat" required/>
+            <label class="visually-hidden" for="phone"></label>
+            <input name="phone" id="phone" type="tel" placeholder="Numer telefonu" required/>
+            <label class="visually-hidden" for="question"></label>
+            <textarea placeholder="Opisz swoje zapytanie" name="question" id="question" rows="5"></textarea>
+            <div class="form__checkbox">
+              <input name="agreement" id="agreement" type="checkbox" required />
+              <label for="agreement">
+                Wyrażam zgodę na przetwarzanie moich danych osobowych w celach ofertowych i zapoznałem/am się oraz
+                akceptuję Politykę prywatności
+              </label>
+            </div>
+            <button class="contact__button-sumbit">
+              <span>Wyślij wiadomość</span>
+            </button>
+          </form>
         </div>
       </section>
     </main>
