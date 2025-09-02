@@ -1,39 +1,42 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// ScrollTrigger.defaults({ markers: true });
-
-ScrollTrigger.normalizeScroll(true);
+ScrollTrigger.normalizeScroll({
+  type: "touch,wheel,pointer",
+  momentum: (self) => Math.min(0.6, Math.abs(self.velocityY) / 2000),
+});
 
 const mm = gsap.matchMedia();
+
 mm.add("(min-width: 768px)", () => {
   const sections = gsap.utils.toArray(".feature__slide");
-  if (sections.length < 2) return;
+  if (!sections.length) return;
+
+  const track = document.querySelector(".feature") || sections[0].parentElement;
+  if (!track) return;
+
+  const speedFactor = 1.6;
 
   const horiz = gsap.to(sections, {
     xPercent: -100 * (sections.length - 1),
     ease: "none",
     scrollTrigger: {
-      trigger: ".feature",
-      pin: true,         
-      scrub: 0.35,                      
-      snap: 1 / (sections.length - 1),
-      end: () => "+=" + (window.innerWidth * (sections.length - 1)),
-      invalidateOnRefresh: true
-    }
+      trigger: track,
+      pin: true,
+      anticipatePin: 1,
+      start: "top top",
+      end: () => {
+        const base = Math.max((track.scrollWidth || 0) - window.innerWidth, window.innerWidth * (sections.length - 1));
+        return "+=" + base * speedFactor;
+      },
+      scrub: 1.2,
+      snap: {
+        snapTo: sections.length > 1 ? 1 / (sections.length - 1) : 1,
+        duration: 0.35,
+        ease: "power1.out",
+      },
+    },
   });
+});
 
-  sections.forEach((panel, i) => {
-    const inner = panel.querySelector(".inner");
-    if (!inner) return;
-
-    gsap.timeline({
-      scrollTrigger: {
-        containerAnimation: horiz,
-        trigger: panel,
-        start: () => (i / (sections.length - 1)) * 100 + "% center",
-        end:   () => ((i + 0.5) / (sections.length - 1)) * 100 + "% center",
-        toggleActions: "play none none reverse"
-      }
-    }).to(inner, { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }, 0);
-  });
+mm.add("(max-width: 767px)", () => {
 });

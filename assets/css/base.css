@@ -309,6 +309,10 @@
   gap: 110px;
 }
 
+.feature__slide:nth-child(even) {
+  background-color: var(--color-primary);
+}
+
 .feature__image {
   width: auto;
   height: 100dvh;
