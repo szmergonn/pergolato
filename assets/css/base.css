@@ -306,7 +306,7 @@
   background-color: var(--color-bg);
   display: flex;
   align-items: center;
-  gap: 110px;
+  gap: clamp(50px, calc(50px + (60 * (100vw - 1200px) / 200)), 110px);
 }
 
 .feature__slide:nth-child(even) {
@@ -325,9 +325,13 @@
   justify-content: center;
 }
 
+.feature__content .container {
+  padding-left: 0;
+}
+
 .feature__title {
   color: var(--color-text);
-  font-size: 55px;
+  font-size: 3.438rem;
   font-weight: 600;
   line-height: var(--lh-120);
   margin-bottom: 18px;
@@ -336,9 +340,8 @@
 .feature__description {
   color: var(--color-text);
   font-family: var(--font-secondary);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
-  max-width: 511px;
   margin-bottom: 40px;
 }
 
@@ -360,7 +363,7 @@
   max-width: 143px;
   color: var(--color-text);
   font-family: var(--font-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: normal;
 }
@@ -381,7 +384,7 @@
 
 .contact__title {
   color: var(--color-black);
-  font-size: 86px;
+  font-size: 5.375rem;
   font-weight: 600;
   line-height: var(--lh-120);
   margin-bottom: 12px;
@@ -389,7 +392,7 @@
 
 .contact__description {
   color: var(--color-black);
-  font-size: 23px;
+  font-size: 1.438rem;
   font-weight: 300;
   line-height: var(--lh-120);
   max-width: 587px;
@@ -402,7 +405,7 @@
   gap: 13px;
   color: var(--color-white);
   font-family: var(--font-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   background-color: #3555be;
   padding: 11px 65px;
@@ -432,7 +435,7 @@
 .contact__contact span,
 .contact__address span {
   font-family: var(--font-secondary);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -441,7 +444,7 @@
 .contact__subtitle {
   font-family: "IvyPresto Display";
   font-weight: 600;
-  font-size: 23px;
+  font-size: 1.438rem;
   line-height: var(--lh-120);
   margin-bottom: 12px;
 }
@@ -456,7 +459,7 @@
 .contact__form textarea {
   color: var(--color-btn-hover);
   font-family: var(--font-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: normal;
   background-color: transparent;
@@ -476,7 +479,7 @@
 .contact__form input::placeholder,
 .contact__form textarea::placeholder {
   font-family: var(--font-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: normal;
 }
@@ -533,7 +536,7 @@
 .form__checkbox label {
   color: var(--color-primary);
   font-family: var(--font-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   line-height: normal;
   cursor: pointer;
@@ -542,7 +545,7 @@
 .contact__button-sumbit {
   color: var(--color-white);
   font-family: var(--font-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: normal;
   padding: 11px 0;

@@ -8,6 +8,21 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .contact .container {
+    flex-direction: column;
+  }
+  
+  .feature__slide {
+    flex-direction: column;
+  }
+
+  .feature__image {
+    height: 50dvh;
+    width: 100vw;
+  }
+}
+
 @media (min-height: 1081px) {
   .hero__content {
     flex: unset;
